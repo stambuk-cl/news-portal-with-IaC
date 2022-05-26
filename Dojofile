@@ -1,0 +1,6 @@
+# Docker image with jdk, lein, make
+# terraform, aws-cli, gcloud
+DOJO_DOCKER_IMAGE="joii/infra-joi-dojo:0.7.0"
+
+# Mount cached build deps to make .jar builds faster in the dojo container
+DOJO_DOCKER_OPTIONS="-v $HOME/.m2:/home/dojo/.m2 -v ~/.config/gcloud:/home/dojo/.config/gcloud"
